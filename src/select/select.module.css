@@ -1,0 +1,89 @@
+.container {
+  position: relative;
+  width: 20em;
+  min-height: 1.5em;
+  border: 0.08em solid grey;
+  border-radius: 0.25em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+  outline: none;
+}
+.container:focus {
+  border-color: rgb(136, 205, 205);
+}
+.value {
+  flex-grow: 1;
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+.options {
+  position: absolute;
+  top: calc(100% + 0.3em);
+  left: 0;
+  border: 1px solid grey;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  border-radius: 0.25em;
+  display: none;
+  z-index: 100;
+  background-color: white;
+}
+.options.show {
+  display: block;
+}
+.option-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.2;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid grey;
+  border-radius: 0.25em;
+}
+.option-btn:hover,
+.option-btn:focus {
+  background-color: rgb(223, 249, 240);
+  border-color: rgb(109, 242, 198);
+}
+.option {
+  height: 90%;
+  padding: 3px;
+  transition: 5ms;
+}
+.option.selected {
+  background-color: rgb(136, 205, 205);
+}
+
+.option.highlighted {
+  background-color: rgb(72, 157, 157);
+  color: white;
+}
+.clear-btn {
+  outline: none;
+  border: none;
+  background: none;
+  color: gray;
+  cursor: pointer;
+  font-size: 1.25em;
+  padding: 0px;
+}
+.clear-btn:focus,
+.clear-btn:hover {
+  color: black;
+}
+.divider {
+  background-color: gray;
+  width: 0.05em;
+  align-self: stretch;
+}
+.caret {
+  border: 0.25em solid transparent;
+  border-top-color: gray;
+  translate: 0 25%;
+}
